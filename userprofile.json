@@ -4,12 +4,12 @@
     "page": 2,
     "userInfo": 
         {
-            "name": "Awesome JAVA",
-            "selfBrand": "ADFSFS GOOGLE SWIFT",
+            "name": "Andy",
+            "selfBrand": "our binary is not optimized for iPhone 5 - New iPhone apps and app updates submitted must support the 4-inch display on iPhone 5 and must include a launch image referenced in the Info.plist under UILaunchImages with a UILaunchImageSize value set to {320, 568}. Launch images must be PNG files and located at the top-level of your bundle, or provided",
             "headerImg": "http://xxxx.jpng"
         }
     ,
     "projectExperience": [
-        {"projectName":"cxxx","description":"awesome","imgurl":"http://xxxdd"},{"projectName":"cxx2","description":"do you ","imgurl":"http://xxxdd"},{"projectName":"cxx3","description":"keeep ","imgurl":"http://xxxdd"}
+        {"projectName":"Awesome iOS","description":"Make something awesome","imgurl":"http://xxxdd"},{"projectName":"EC3","description":"do you six ways ","imgurl":"http://xxxdd"},{"projectName":"project way","description":"keep good going with them. ","imgurl":"http://xxxdd"}
     ]
 }
