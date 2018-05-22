@@ -1,0 +1,26 @@
+﻿{
+    "name": "selectedPeopleList",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "arrayType": [
+        "Select AREA",
+        "LANG TYPE",
+        "IS WORKING"
+    ],
+    "arrayTypeList": [
+        [
+            "beijing",
+            "hangzhou",
+            "shenzheng"
+        ],
+        [
+            "Java",
+            "PHP",
+            "Android"
+        ],
+        [
+            "Onsite",
+            "Pendding"
+        ]
+    ]
+}
