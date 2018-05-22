@@ -6,31 +6,31 @@
         {
             "count": 120,
             "title": "J2EE",
-            "descript": "http://www.google.com",
+            "descript": "occupancy",
             "color": "PNBlue"
         },
         {
             "count": 40,
             "title": "Spring",
-            "descript": "http://www.google.com",
+            "descript": "occupancy",
             "color": "PNDeepGreen"
         },
         {
             "count": 140,
             "title": "JQuery",
-            "descript": "http://www.google.com",
+            "descript": "occupancy",
             "color": "PNYellow"
         },
         {
             "count": 90,
             "title": "NodeJs",
-            "descript": "http://www.google.com",
+            "descript": "occupancy",
             "color": "PNBrown"
         },
         {
             "count": 120,
             "title": "Android",
-            "descript": "http://www.google.com",
+            "descript": "occupancy",
             "color": "PNMauve"
         }
     ]
