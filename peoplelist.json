@@ -8,6 +8,7 @@
             "title": "Abel Liang",
             "time": "2018.7.12",
             "isRead": "Senior Engineer",
+            "specialID":3,
             "content": "Proficient in Bootstrap/Firebug/J2EE/Spring."
         },
         {
@@ -15,6 +16,7 @@
             "title": "Alex Si",
             "time": "2018.6.12",
             "isRead": "iOS Lead",
+            "specialID":4,
             "content": "I am leading a team, consisting of 16 members."
         },
         {
@@ -22,6 +24,7 @@
             "title": "Alice Jene",
             "time": "2018.7.10",
             "isRead": "UX Designer",
+            "specialID":5,
             "content": "It is great to working with passion. I could make something awesome."
         },
         {
@@ -29,13 +32,15 @@
             "title": "Abe Captain",
             "time": "2018.7.13",
             "isRead": "Senior iS Engineer",
-            "content": "Creation creator, Awesomely."
+            "specialID":6,
+            "content": "😋, where there is a will, there is a way. Awesome."
         },
         {
             "picUrl": "http://xxxx.jpg",
             "title": "Alex Xiao",
             "time": "2018.7.22",
             "isRead": "Project Manager",
+            "specialID":7,
             "content": "Proficient in project management.Over 9+ years working experience"
         }
     ]
