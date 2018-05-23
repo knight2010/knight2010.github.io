@@ -1,36 +1,34 @@
 ﻿{
     "name": "selectedPeopleList",
     "url": "http://www.symbio.com",
-    "page": 2,
+    "page": 3,
     "arrayType": [
-        "Select AREA",
-        "LANG TYPE",
-        "IS WORKING"
+        "Select Location",
+        "Select Profile ",
+        "Availability"
     ],
     "arrayTypeList": [
         [
-            "beijing",
-            "hangzhou",
-            "shenzheng"
+            "Beijing",
+            "Chengdu",
+            "Hangzhou",
+            "Shenzhen"
         ],
         [
-            "Java",
-            "PHP",
-            "Jenkins",
-            "Jira",
-            "Mysql",
-            "Putty",
-            "Python",
-            "Git",
-            "I18N",
-            "Spring",
-            "Marven",
-            "iOS",
-            "Android"
+            "J2EE Developer",
+            "Android Application Developer",
+            "AWS Operations Engineer",
+            "AWS Solution Engineer",
+            "Big Data Analyst",
+            "Big Data Engineer",
+            "Full-stack Web Developer",
+            "iS Application Developer",
+            "Test Automation Engineer",
+            "UI/UX Designer"
         ],
         [
-            "Onsite",
-            "Pendding"
+            "In project",
+            "Available"
         ]
     ]
 }
