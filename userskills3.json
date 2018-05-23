@@ -1,0 +1,19 @@
+﻿{
+    "name": "userskill3",
+    "url": "http://www.symbio.com",
+    "page": 3,
+    "titleSource": [
+        "JAVA",
+        "PHP",
+        "iOS",
+        "Android",
+        "Ruby"
+    ],
+    "valueSource": [
+        "15",
+        "20",
+        "30",
+        "15",
+        "5"
+    ]
+}

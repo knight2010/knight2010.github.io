@@ -1,0 +1,15 @@
+﻿{
+    "name": "userprofile",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "userInfo": 
+        {
+            "name": "Alex Si",
+            "selfBrand": "iOS - Responsible for the quality assurance development and delivering multiple systems.Strong sense in security, stability, reliable, scalable for product.Global view in software designed.Ability to encourage engineering best practices in a team. Work openly and collaboratively with a diverse team. Lead team to accomplish project goal with high performance.Designed, architecting applications and responsible for product implementation skills selection for multiple platform (android, iOS, front)",
+            "headerImg": "http://xxxx.jpng"
+        }
+    ,
+    "projectExperience": [
+        {"projectName":"Awesome iOS","description":"Make something awesome","imgurl":"http://xxxdd"},{"projectName":"EC3","description":"do you six ways ","imgurl":"http://xxxdd"},{"projectName":"project way","description":"keep good going with them. ","imgurl":"http://xxxdd"}
+    ]
+}
