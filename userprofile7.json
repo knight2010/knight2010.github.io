@@ -10,6 +10,6 @@
         }
     ,
     "projectExperience": [
-        {"projectName":"Mobility","description":"Make something awesome","imgurl":"http://knight2010.github.io/pro-1.png"},{"projectName":"EC3 - Global","description":"do you six ways ","imgurl":"http://knight2010.github.io/Pro-2.png"},{"projectName":"GROW App","description":"keep good going with them. ","imgurl":"http://knight2010.github.io/pro-3.png"}
+        {"projectName":"Microsoft Skype for Business","description":"It made up of a number of connecting parts, and the development experience is no different.","imgurl":"http://knight2010.github.io/pro-1.png"},{"projectName":"Bots - Global","description":"Bots let you interact with customers in a personal conversation","imgurl":"http://knight2010.github.io/Pro-2.png"},{"projectName":"GROW AddIn","description":"Integrate your app directly into Skype so users can share content, play games, and get things done without switching apps. ","imgurl":"http://knight2010.github.io/pro-3.png"}
     ]
 }
