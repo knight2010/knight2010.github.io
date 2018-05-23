@@ -1,0 +1,15 @@
+﻿{
+    "name": "userprofile",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "userInfo": 
+        {
+            "name": "Alex Xiao",
+            "selfBrand": "iOS - Responsible for the quality assurance development and delivering multiple systems.Strong sense in security, stability, reliable, scalable for product.Global view in software designed.Ability to encourage engineering best practices in a team. Work openly and collaboratively with a diverse team. Lead team to accomplish project goal with high performance.Designed, architecting applications and responsible for product implementation skills selection for multiple platform (android, iOS, front)",
+            "headerImg": "http://xxxx.jpng"
+        }
+    ,
+    "projectExperience": [
+        {"projectName":"Mobility","description":"Make something awesome","imgurl":"http://knight2010.github.io/pro-1.png"},{"projectName":"EC3 - Global","description":"do you six ways ","imgurl":"http://knight2010.github.io/pro-2.png"},{"projectName":"GROW App","description":"keep good going with them. ","imgurl":"http://knight2010.github.io/pro-3.png"}
+    ]
+}

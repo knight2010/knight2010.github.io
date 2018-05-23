@@ -1,0 +1,19 @@
+﻿{
+    "name": "userskills",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "titleSource": [
+        "iOS",
+        "Android",
+        "Python",
+        "Fastlane",
+        "Ruby"
+    ],
+    "valueSource": [
+        "25",
+        "20",
+        "25",
+        "25",
+        "10"
+    ]
+}

@@ -1,0 +1,19 @@
+﻿{
+    "name": "userskills",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "titleSource": [
+        "JAVA",
+        "Jenkins",
+        "Python",
+        "Jira",
+        "Ruby"
+    ],
+    "valueSource": [
+        "15",
+        "20",
+        "10",
+        "25",
+        "10"
+    ]
+}

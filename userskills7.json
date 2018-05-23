@@ -1,0 +1,21 @@
+﻿{
+    "name": "userskills",
+    "url": "http://www.symbio.com",
+    "page": 2,
+    "titleSource": [
+        "JAVA",
+        "PHP",
+        "Python",
+        "Mysql",
+        "Weblogic",
+        "Ruby"
+    ],
+    "valueSource": [
+        "15",
+        "20",
+        "25",
+        "30",
+        "15",
+        "10"
+    ]
+}
