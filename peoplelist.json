@@ -5,24 +5,24 @@
     "data": [
         {
             "picUrl": "http://knight2010.github.io/bili.png",
-            "title": "Awesome geek J2EE",
+            "title": "Abel Liang",
             "time": "2018.7.12",
             "isRead": "Senior Engineer",
-            "content": "It is great to working on.."
+            "content": "Proficient in Bootstrap/Firebug/J2EE/Spring."
         },
         {
             "picUrl": "http://xxxx.jpg",
-            "title": "geek java",
+            "title": "Alex Si",
             "time": "2018.6.12",
             "isRead": "iOS Lead",
-            "content": "It is great to working on.."
+            "content": "I am leading a team, consisting of 16 members."
         },
         {
             "picUrl": "http://knight2010.github.io/uie.png",
             "title": "Alice Jene",
             "time": "2018.7.10",
             "isRead": "UX Designer",
-            "content": "It is great to working with passion. I enjoy my work and happy to work with others."
+            "content": "It is great to working with passion. I could make something awesome."
         },
         {
             "picUrl": "http://knight2010.github.io/awe.png",
@@ -33,10 +33,10 @@
         },
         {
             "picUrl": "http://xxxx.jpg",
-            "title": "Awesome geek J2EE",
+            "title": "Alex Xiao",
             "time": "2018.7.22",
             "isRead": "Project Manager",
-            "content": "It is great to working on.."
+            "content": "Proficient in project management.Over 9+ years working experience"
         }
     ]
 }
