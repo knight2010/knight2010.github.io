@@ -6,31 +6,37 @@
         {
             "count": 120,
             "title": "J2EE",
-            "descript": "occupancy",
+            "descript": "CD",
             "color": "PNBlue"
         },
         {
             "count": 40,
-            "title": "Spring",
-            "descript": "occupancy",
+            "title": "is",
+            "descript": "SZ",
             "color": "PNDeepGreen"
         },
         {
             "count": 140,
             "title": "JQuery",
-            "descript": "occupancy",
+            "descript": "CD",
             "color": "PNYellow"
         },
         {
             "count": 90,
             "title": "NodeJs",
-            "descript": "occupancy",
+            "descript": "BJ",
             "color": "PNBrown"
+        },
+        {
+            "count": 90,
+            "title": "Selenium",
+            "descript": "HC",
+            "color": "PNLightGrey"
         },
         {
             "count": 120,
             "title": "Android",
-            "descript": "occupancy",
+            "descript": "CD",
             "color": "PNMauve"
         }
     ]
