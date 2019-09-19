@@ -5,38 +5,38 @@
     "data": [
         {
             "count": 120,
-            "title": "J2EE",
-            "descript": "CD",
+            "title": "Traveling",
+            "descript": "OutSide",
             "color": "PNBlue"
         },
         {
             "count": 40,
-            "title": "is",
-            "descript": "SZ",
+            "title": "Cooking",
+            "descript": "Inside",
             "color": "PNDeepGreen"
         },
         {
             "count": 140,
-            "title": "JQuery",
-            "descript": "CD",
+            "title": "Tv",
+            "descript": "Inside",
             "color": "PNYellow"
         },
         {
             "count": 90,
-            "title": "NodeJs",
-            "descript": "BJ",
+            "title": "Rolling",
+            "descript": "OutSide",
             "color": "PNBrown"
         },
         {
             "count": 90,
-            "title": "Selenium",
-            "descript": "HC",
+            "title": "Running",
+            "descript": "Outside",
             "color": "PNLightGrey"
         },
         {
             "count": 120,
-            "title": "Android",
-            "descript": "CD",
+            "title": "Cards",
+            "descript": "Inside",
             "color": "PNMauve"
         }
     ]
