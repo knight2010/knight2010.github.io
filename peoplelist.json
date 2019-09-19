@@ -42,6 +42,22 @@
             "isRead": "Project Manager",
             "specialID":7,
             "content": "Proficient in project management.Over 9+ years working experiencProficient in project management.Over 9+ years working experience"
+        },
+        {
+            "picUrl": "http://xxxx.jpg",
+            "title": "Alex1 Xiao",
+            "time": "2018.7.22",
+            "isRead": "Project Manager",
+            "specialID":7,
+            "content": "Proficient in project management.Over 9+ years working experiencProficient in project management.Over 9+ years working experience"
+        },
+        {
+            "picUrl": "http://xxxx.jpg",
+            "title": "Alex2Xiao",
+            "time": "2018.7.22",
+            "isRead": "Project Manager",
+            "specialID":7,
+            "content": "Proficient in project management.Over 9+ years working experiencProficient in project management.Over 9+ years working experience"
         }
     ]
 }
