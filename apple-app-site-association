@@ -1,6 +1,8 @@
 {
 "applinks": {
-        "apps": [],
+        "apps": [
+ "CM459Q8NK7.apple.inspire.tech.aiclip"
+],
         "details": {
 	"CM459Q8NK7.apple.inspire.tech": {
 		"paths": [ "*" ]
