@@ -1,13 +1,16 @@
 {
-"applinks": {
+    "appclips": {
         "apps": [
-	"CM459Q8NK7.apple.inspire.tech.Clip"
-],
+            "CM459Q8NK7.apple.inspire.tech.Clip"
+        ]
+    },
+    "applinks": {
+        "apps": [],
         "details": {
-	"CM459Q8NK7.apple.inspire.tech": {
-		"paths": [ "*" ]
-	}
-	}
-	}
+            "CM459Q8NK7.apple.inspire.tech": {
+                "paths": [ "*" ]
+            }
+        }
+    }
 }
 
