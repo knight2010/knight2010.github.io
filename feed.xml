@@ -1,25 +1,29 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
-<channel>
-<title>Awesome podcast</title>
-<itunes:owner>
-<itunes:name>Knight Captain</itunes:name>
-<itunes:email>k-night@163.com</itunes:email>
-</itunes:owner>
-<item>
-<title>Sundel No54</title>
-<itunes:title>Sundel No54</itunes:title>
-<enclosure url="https://traffic.libsyn.com/swiftbysundell/SwiftBySundell54.mp3" length="79295410" type="audio/mpeg"/>
-<media:content url="https://traffic.libsyn.com/swiftbysundell/SwiftBySundell54.mp3" length="79295410" type="audio/mpeg" isDefault="true" medium="audio">
-<media:title type="plain">Swift Dev episode</media:title>
-</media:content>
-</item>
-<item>
-<title>Knight Captain</title>
-<itunes:title>Knight Captain</itunes:title>
-<enclosure url="https://sourcesquarechina.online/aud/about-knight.mp3" length="792954" type="audio/mpeg"/>
-<media:content url="https://sourcesquarechina.online/aud/about-knight.mp3" length="792954" type="audio/mpeg" isDefault="true" medium="audio">
-<media:title type="plain">About Knight episode</media:title>
-</media:content>
-</item>
-</channel>
+<rss
+    xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+    xmlns:media="http://www.rssboard.org/media-rss" version="2.0">
+    <channel>
+        <title>Awesome podcast</title>
+        <itunes:owner>
+            <itunes:name>Knight Captain</itunes:name>
+            <itunes:email>k-night@163.com</itunes:email>
+        </itunes:owner>
+        <item>
+            <title>Sundel No54</title>
+            <itunes:title>Sundel No54</itunes:title>
+            <enclosure url="https://traffic.libsyn.com/swiftbysundell/SwiftBySundell54.mp3" length="79295410" type="audio/mpeg"/>
+            <media:content url="https://traffic.libsyn.com/swiftbysundell/SwiftBySundell54.mp3" length="79295410" type="audio/mpeg" isDefault="true" medium="audio">
+                <media:title type="plain">Swift Dev episode</media:title>
+            </media:content>
+        </item>
+        <item>
+            <title>Knight Captain</title>
+            <itunes:title>Knight Captain</itunes:title>
+            <enclosure url="https://sourcesquarechina.online/aud/about-knight.mp3" length="792954" type="audio/mpeg"/>
+            <media:content url="https://sourcesquarechina.online/aud/about-knight.mp3" length="792954" type="audio/mpeg" isDefault="true" medium="audio">
+                <media:title type="plain">About Knight episode</media:title>
+            </media:content>
+        </item>
+    </channel>
 </rss>
