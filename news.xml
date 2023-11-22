@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Freelance news</title>
+    <description>The latest news from Freelance</description>
+    <copyright>Copyright © Freelance 2023</copyright>
+    <language>en-us</language>
+    <ttl>60</ttl>
+    <lastBuildDate>Wed, 22 Nov 2023 06:38:57 GMT</lastBuildDate>
+    <item>
+      <title>get start rss item</title>
+      <description>Awesome ssl. items</description>
+      <link>https://traffic.libsyn.com/swiftbysundell/SwiftBySundell54.mp3</link>
+      <guid isPermaLink="false">b37ce20c7ad64c0196d37824de1f5ce0</guid>
+      <pubDate>Wed, 22 Nov 2023 06:37:10 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
