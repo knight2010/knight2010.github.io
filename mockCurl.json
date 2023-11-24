@@ -1,0 +1,21 @@
+{
+  "method": "POST",
+  "url": "https://captain.k.com/request",
+  "httpVersion": "HTTP/1.1",
+  "queryString": [
+    { "name": "awesome", "value": "cap" },
+    { "name": "cool", "value": "men" }
+  ],
+  "headers": [
+    { "name": "Accept", "value": "application/json" },
+    { "name": "Content-Type", "value": "application/json" }
+  ],
+  "cookies":  [
+    { "name": "awesome", "value": "bar" },
+    { "name": "sayhi", "value": "men" }
+  ],
+  "postData": {
+    "mimeType": "application/json",
+    "text": "{\"awesome\": \"awe\"}"
+  }
+}
