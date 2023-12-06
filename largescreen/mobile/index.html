@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>我要大声说</title>
+        <meta name="description" content="">
+<!--
+        <meta name="viewport" content="width=device-width, initial-scale=1.0，maximum-scale=1.0,user-scalable=0">
+-->
+
+        <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+<!--
+        <link rel="stylesheet" href="css/normalize.css">
+-->
+<!--
+        <link rel="stylesheet" href="css/animate.css">
+-->
+        <link rel="stylesheet" href="css/main.css">
+        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+       <div style="width: 640px;margin: 0 auto;position: relative;overflow: hidden">
+           <div class="loading-msg">
+               <div class="frame">
+                   <div class="zh">精彩即将呈现</div>
+                   <div class="en"></div>
+                   <div class="loading-box">
+                       <div class="loading" index="0"></div>
+                       <div class="loading" index="1"></div>
+                       <div class="loading" index="2"></div>
+                       <div class="loading" index="3"></div>
+                       <div class="loading" index="4"></div>
+                   </div>
+               </div>
+
+           </div>
+           <div class="main">
+               <div class="post-box">
+                   <div class="post-msg"></div>
+               </div>
+               <div class="index-bg">
+               </div>
+               <div class="logo"></div>
+               <div class="content-box">
+                   <div class="print">
+                       <div class="print-bg"></div>
+                       <div class="finger"></div>
+                       <div class="scanner"></div>
+                   </div>
+                   <div class="msg-box">
+                       <div class="msg-bg"></div>
+                       <div class="countTips" id="countTips">还可以输入<span id="textCount">100</span>个字</div>
+                       <textarea class="text-box" id="textInput" placeholder="请输入你最想说的话..." ></textarea>
+                       <div class="submit-btn"><div class="heart"></div>我要大声说</div>
+                   </div>
+               </div>
+           </div>
+       </div>
+        <script>
+            /*横屏检测*/
+            window.addEventListener('orientationchange',landscapeListener);
+            function landscapeListener()
+            {
+                if(window["orientation"]==90||window["orientation"]==-90){
+                    alert("请使用竖屏浏览！");
+                }
+            }
+        </script>
+        <!--<script src="js/plugins.js"></script>-->
+        <script src="js/zepto/zepto.js"></script>
+        <script src="js/zepto/touch.js"></script>
+        <script src="js/zepto/fx.js"></script>
+        <script src="js/main.js"></script>
+<!--
+        <script src="js/combine.js"></script>
+-->
+         <script type="text/javascript">
+            var app={printUrl:"http://www.test.com/print.php",sendMessUrl:"http://www.test.com/msg.php"}
+        /*loading 加载完执行*/
+        window.onload=function(){
+            $(".loading-msg").remove();
+            /*动态入场
+            判断是否已签到:  “noPrint”= 未签到    “isPrint”= 已签到
+            */
+            /*var num=Math.random();
+            if(num<0.5){
+                $(".main").addClass("noPrint");
+            }else{
+                $(".main").addClass("isPrint");
+            }*/
+            $(".main").addClass("noPrint");
+        }
+    </script>
+    </body>
+</html>
+

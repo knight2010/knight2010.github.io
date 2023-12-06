@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>vivo - 音乐带你去旅行</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+        }
+        html{
+            background: #777;
+            padding: 5px;
+        }
+        body{
+            margin: 0;
+            /*background: url(img/p2_bg.jpg) no-repeat;*/
+            background: #fff;
+            background-size: cover;
+            font-size: 16px;
+        }
+        p{
+            text-align: left;
+        }
+        label{
+            line-height: 35px;
+            margin: 15px 0;
+            display: inline-block;
+        }
+        input{
+            margin-left: 5px;
+            vertical-align: top;
+            border: 1px solid #8fc6da;
+            border-radius: 5px;
+            line-height: 35px;
+            height: 35px;
+            padding: 3px;
+            width: 180px;
+        }
+        form{
+            display: inline-block;
+            text-align: center;
+        }
+        button{
+            color: #fff;
+            border: none;
+            background: #008ecc;
+            padding: 5px;
+            font-size: 20px;
+            line-height: 1;
+            display: block;
+            float: right;
+            width: 100px;
+        }
+        button:active{
+            background:#0098d6 ;
+        }
+        table{
+            table-layout: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        td{
+            vertical-align: middle;
+            text-align: center;
+        }
+        form{
+
+        }
+        fieldset{
+            border: 2px dashed #6ac4e9;
+        }
+        h3{
+            text-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+        }
+    </style>
+    <script>
+    	<?php if(!empty($this->msg)):?>
+    		alert('<?php echo $this->msg?>');
+    	<?php endif;?>
+    	<?php if(!empty($this->id)):?>
+    		window.location='<?php echo $this->baseUrl('/')?>';
+    	<?php endif;?>
+    </script>
+</head>
+<body>
+<table>
+       <tr>
+           <td>
+               <fieldset>
+                   <legend style="color: #008ecc"><h3>奖品领取人信息</h3></legend>
+                   <form action="" method="POST">
+                       <div>
+                           <label>姓　　名:<input required type="text" name="name"/></label>
+                       </div>
+                       <div>
+                           <label>手机号码:<input required type="tel" name="phone"/></label>
+                       </div>
+                       <div>
+                           <label>送货地址:<input required type="text" name="address"/></label>
+                       </div>
+                       <div>
+                           <label>邮　　编:<input required type="text" name="zipcode"/></label>
+                       </div>
+                       <div>
+                           <button type="submit">提交信息</button>
+                       </div>
+                   </form>
+                   <P>提交成功后，vivo工作人员会根据您填写的信息，进行核实确定无误之后，及时发送奖品给您。</P>
+               </fieldset>
+           </td>
+       </tr>
+</table>
+</body>
+</html>

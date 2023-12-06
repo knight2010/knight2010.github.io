@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>奔步年会签到</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0，maximum-scale=1.0,user-scalable=0">
+        <link rel="stylesheet" href="<?php echo $this->baseUrl('/mobile/css/main.css?v=').rand()?>">
+    </head>
+    <body>
+        <div class="loading-msg">
+            <div class="frame">
+                <div class="zh">精彩即将呈现</div>
+                <div class="en"></div>
+                <div class="loading-box">
+                    <div class="loading" index="0"></div>
+                    <div class="loading" index="1"></div>
+                    <div class="loading" index="2"></div>
+                    <div class="loading" index="3"></div>
+                    <div class="loading" index="4"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="main">
+            <div class="post-box">
+                 <div class="post-msg"></div>
+            </div>
+            <div class="index-bg"></div>
+            <div class="logo"></div>
+            <div class="content-box">
+                <div class="print">
+                    <div class="print-bg"></div>
+                    <div class="finger"></div>
+                    <div class="scanner"></div>
+                </div>
+                <div class="msg-box">
+                    <div class="msg-bg"></div>
+                    <div class="countTips" id="countTips">还可以输入<span id="textCount">100</span>个字</div>
+                    <textarea class="text-box" id="textInput" placeholder="请输入你的祝福语..."></textarea>
+                    <div class="submit-btn">送上祝福</div>
+                </div>
+            </div>
+        </div>
+        <script>
+            /*横屏检测*/
+            window.addEventListener('orientationchange',landscapeListener);
+            function landscapeListener()
+            {
+                if(window["orientation"]==90||window["orientation"]==-90){
+                    alert("请使用竖屏浏览！");
+                }
+            }
+        </script>
+        <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script>
+            wx.config({
+                debug: false,
+                appId: '<?php echo $this->signPackage["appId"];?>',
+                timestamp: <?php echo $this->signPackage["timestamp"];?>,
+            nonceStr: '<?php echo $this->signPackage["nonceStr"];?>',
+                    signature: '<?php echo $this->signPackage["signature"];?>',
+                    jsApiList: []
+            });
+            wx.ready(function () {
+                wx.hideOptionMenu();
+// 在这里调用 API
+            });
+        </script>
+        <script src="<?php echo $this->baseUrl('/mobile/js/combine.js')?>"></script>
+         <script type="text/javascript">
+            var app={printUrl:"<?php echo $this->url(array('controller'=>'index','action'=>'entrance'),null,true);?>",sendMessUrl:"<?php echo $this->url(array('controller'=>'index','action'=>'sendmsg'),null,true);?>"}
+        /*loading 加载完执行*/
+        window.onload=function(){
+            $(".loading-msg").remove();
+
+            var className='<?php echo ($this->isSign?'isPrint':'noPrint');?>';
+            $(".main").addClass(className);
+        }
+    </script>
+    </body>
+</html>
