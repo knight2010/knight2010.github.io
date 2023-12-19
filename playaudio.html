@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Audio</title>
+</head>
+<body>
+
+<audio controls controls="none" id="audioPlayer" style="display: none;">
+    <!-- Provide the URL of the audio file you want to play -->
+    <source id="audioSource" src="https://awesome.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+</audio>
+
+<input type="text" id="newAudioUrl" placeholder="Enter new audio URL">
+<button onclick="updateAudio()">Update Audio URL</button>
+
+<button onclick="playAudio()">Play</button>
+<button onclick="pauseAudio()">Pause</button>
+<button onclick="stopAudio()">Stop</button>
+
+<script>
+    // You can use JavaScript to control the audio player
+    var audioPlayer = document.getElementById("audioPlayer");
+    var newAudioUrlInput = document.getElementById("newAudioUrl");
+
+    function updateAudio() {
+        // Get the new audio URL from the input field
+        var newAudioUrl = newAudioUrlInput.value;
+
+        // Update the src attribute of the audio source
+        audioSource.src = newAudioUrl;
+
+        // Load and play the new audio
+        audioPlayer.load();
+        audioPlayer.play();
+    }
+
+    // Example: Play the audio
+    function playAudio() {
+        audioPlayer.play();
+    }
+
+    // Example: Pause the audio
+    function pauseAudio() {
+        audioPlayer.pause();
+    }
+
+    // Example: Toggle play/pause
+    function togglePlayPause() {
+        if (audioPlayer.paused) {
+            audioPlayer.play();
+        } else {
+            audioPlayer.pause();
+        }
+    }
+</script>
+
+</body>
+</html>
+

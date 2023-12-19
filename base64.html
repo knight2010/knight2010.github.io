@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 HTML Body</title>
+</head>
+<body>
+    <!-- Replace this with your Base64-encoded content -->
+    <div id="base64Content"></div>
+
+    <script>
+        // Decode the Base64 string and set it as the content of the body
+        var base64Content = "PGgxPkhlcmUgd2UgYXJlPC9oMT4KPGRpdj48aDI+QSBsb3Qgb2YgdGhpbmdzIGhhcHBlbmVkPC9oMj48L2Rpdj4="; 
+
+        // Decode the Base64 string
+        var decodedContent = atob(base64Content);
+
+        // Set the decoded content as the body of the document
+        document.getElementById('base64Content').innerHTML = decodedContent;
+    </script>
+</body>
+</html>
+
