@@ -1,0 +1,34 @@
+Playcanvas functions
+
+
+this.entity.collision.on('collisionstart', this.onColllision, this);
+
+ this.app.fire('GameManager:Sound:land');
+
+  this.entity.anim.setBoolean('jump', false);
+
+  Player.prototype.jump = function () {}
+
+Player.attributes.add("landingParticle", { type: 'entity' });
+
+  Player.prototype.createLandingParicle = function () {
+    let particle = this.landingParticle.clone();
+    this.app.root.addChild(particle);
+    particle.setPosition(0, 2, 0);
+    particle.enabled = true;
+};
+
+//Make http request..
+
+Game.prototype.loadJsonFromRemote = function (url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", function () {
+        callback(JSON.parse(this.response));
+    });
+    xhr.open("GET", url);
+    xhr.send();
+};
+
+pc.http.del("http://example.com/", function (err, response) {
+    console.log(response);
+});

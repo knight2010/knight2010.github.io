@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://uwhile.com/ticket.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>餐饮小票生成器|餐饮小票在线生成器</title>
+    
+    <meta name="keywords" content="报销，餐饮小票,餐饮消费清单,小票生成,餐饮小票生成器">
+    <meta name="description" content="报销，餐饮小票，消费清单一键在线自动生成，并支持一键打印。">
+    <link rel="stylesheet" href="./餐饮小票生成器_餐饮小票在线生成器_files/pure-min.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="./餐饮小票生成器_餐饮小票在线生成器_files/grids-responsive-min.css">
+    <!--<![endif]-->
+    <script src="./餐饮小票生成器_餐饮小票在线生成器_files/jquery.min.js"></script>
+    <script src="./餐饮小票生成器_餐饮小票在线生成器_files/jQuery.print.min.js"></script>
+    <script type="text/javascript" src="./餐饮小票生成器_餐饮小票在线生成器_files/stats" charset="UTF-8"></script>
+    <style>
+        .nav {
+            padding: 10px 0 10px 20px;
+            background-color: #57A1DF;
+            color: white;
+        }
+
+        #content {
+            width: 300px;
+            padding-top: 30px;
+            font-size: 10px;
+            /*color: rgba(39, 39, 39, 0.7);
+            text-shadow: #a4a4a4 0 0 4px;*/
+        }
+
+        #config {
+            padding-top: 30px;
+        }
+
+        .name {
+            text-align: left;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .jiezhang {
+            padding-top: 10px;
+            padding-left: 15px;
+        }
+
+        .metadata {
+            margin: 10px 0px 0px 5px;
+            width: 100%;
+        }
+
+        .list {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .item-name {
+            text-align: left;
+        }
+
+        .list thead {
+            /*border-top: 1px solid #1d1d1d;*/
+            /*border-bottom: 1px solid #1d1d1d;*/
+        }
+
+        .list td {
+            padding: 5px 0 3px 5px;
+        }
+
+        .foot {
+            margin-top: 5px;
+            margin-bottom: 20px;
+            padding-top: 5px;
+            border-top: solid 0px #333333;
+        }
+
+        .price {
+            font-size: 18px;
+        }
+
+        .footer {
+            padding-top: 5px;
+            text-align: center;
+            color: grey;
+            font-size: 12px;
+            border-top: 1px solid #afafaf;
+        }
+    </style>
+
+</head>
+<body>
+<div class="nav">
+    <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">餐饮小票生成器</a></li>
+        </ul>
+    </div>
+</div>
+<div class="pure-g">
+    <div class="pure-u-12-24">
+        <div id="config">
+            <form class="pure-form pure-form-aligned" name="config-form">
+                <fieldset>
+                    <div class="pure-control-group">
+                        <label>总金额</label>
+                        <input type="number" name="finalFee" required="" value="300">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label>店名</label>
+                        <input type="text" name="shopName" value="新湘记(奥克斯)" required="">
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label>类型</label>
+                        <select name="shopType">
+                            <option value="chuan">川菜</option>
+                            <option value="hotpot">火锅</option>
+                        </select>
+                    </div>
+
+                    <div class="pure-control-group">
+                        <label>No</label>
+                        <input type="text" name="Number" value="14201231234">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>市别</label>
+                        <input type="text" name="servicetype" value="晚市">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>印单</label>
+                        <input type="text" name="table" value="李长刚">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>开单</label>
+                        <input type="text" name="kaidan" value="杨帅">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>人数</label>
+                        <input type="text" name="people" value="2">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>台位</label>
+                        <input type="text" name="waiter" value="015台">
+                    </div>
+                    <div class="pure-control-group">
+                        <label>日期</label>
+                        <input type="text" name="date" value="2020-08-28 19:12:46">
+                    </div>
+
+                    <div class="pure-controls">
+                        <button type="button" class="pure-button pure-button-primary" onclick="generateTicket()">一键生成</button>
+                        <button type="button" onclick="print()" class="pure-button pure-button-primary">打印</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="pure-u-12-24">
+        <div id="content">
+            <div class="name"><span name="shopName">新湘记(奥克斯)</span></div>
+<div class="jiezhang">[结账单]</div>
+            <table class="metadata">
+                <tbody>
+                    <tr>
+                    <td>No：<span name="Number">8</span></td>
+                    <td>台位：<span name="waiter">12</span></td>
+                    </tr>
+                    <tr>
+                    <td>印单：<span name="table">8</span></td>
+                    <td>开单：<span name="kaidan">12</span></td>
+                    </tr>
+                    <tr>
+                    <td>市别：<span name="servicetype">晚市</span></td>
+                    <td>人数：<span name="people">12</span></td>
+                    </tr>
+                <tr>
+                    <td>日期：<span name="date">2019-07-27</span></td>
+                </tr>
+            </tbody></table>
+<div>_______________________</div>
+            <table class="list">
+                <thead>
+                <tr>
+                    <td>菜品</td>
+                    <td>数量</td>
+                    <td>单价</td>
+                    <td>金额</td>
+                </tr>
+                </thead>
+                <tbody><tr><td class="item-name">老腊肉</td><td>36.00</td><td>1</td><td>36.00</td></tr><tr><td class="item-name">潼南太安鱼</td><td>81.00</td><td>2</td><td>162.00</td></tr><tr><td class="item-name">香辣虾</td><td>88.00</td><td>1</td><td>88.00</td></tr><tr><td class="item-name">小菜豆付汤</td><td>16.00</td><td>1</td><td>16.00</td></tr><tr><td class="item-name">炖碗豆汤</td><td>16.00</td><td>1</td><td>16.00</td></tr></tbody>
+            </table>
+<div>_______________________</div>
+            <div class="foot">
+                <div>消费金额：<span name="total">318.00</span></div>
+                <div>优惠：<span name="sale">18.00</span></div>
+                <div class="price">收金额：<span name="finalFee">300.00</span></div>
+                <div>_______________________</div>
+                <div style="text-align: left;margin-left: 10px;font-size: 13px;">欢迎下次光临! </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    生成器 goawesome
+</div>
+
+
+<script>
+    var hotpot = [{"鲜毛肚": 33}, {"青青草毛肚": 43}, {"木瓜毛肚": 33}, {"精品双绝": 59}, {"自家豆腐": 11}, {"南瓜饼": 16}, {"蒸饺": 17}, {"紫薯珍珠球": 13}, {"翡翠酱香包": 19}, {"金玉米糕": 13}, {"蛋炒饭": 17}, {"时蔬炒饭": 17}, {"精品汤+红汤": 45}, {"筒骨汤+红汤": 45}, {"全红汤": 45}, {"家居酥肉": 17}, {"豆腐肉丸": 17}, {"肥肠": 27}, {"焖发鱿鱼": 19}, {"酱香肉片": 17}, {"大刀老肉": 27}, {"精品鹅肠": 27}, {"鲜牛肝": 17}, {"鲜鸭肠": 23}, {"鲜猪黄喉": 29}, {"凤尾腰花": 19}, {"鲜鳝鱼片": 30}, {"鲜泥鳅": 29}, {"精品耗儿鱼": 29}, {"海昌鱼": 19}, {"基围虾": 31}, {"鲜鱿鱼": 21}, {"墨鱼仔": 21}, {"鲜鱼肚": 21}, {"花鲢鱼头": 27}, {"鲜乌鱼片": 30}, {"黄腊丁": 33}, {"时蔬拼盘": 23}, {"茼蒿": 11}, {"娃娃菜": 9}, {"鲜鸭血": 9}, {"山药": 13}, {"莲藕": 9}, {"年糕": 9}, {"冻豆腐": 9}, {"白萝卜": 6}, {"面块": 9}, {"油碟": 7}, {"锅灶租金/套": 20}, {"老南瓜": 6}, {"手工鲜虾丸": 39}, {"功夫牛肉丸": 29}, {"三味香丸": 21}, {"香菜丸子": 19}, {"脆皮肠脆皮肠": 13}, {"鸟巢孵蛋": 13}, {"月君 花": 23}, {"无骨凤爪": 19}, {"嫩牛肉": 27}, {"鲜脑花": 17}, {"鲜牙梗": 21}, {"带皮牛肉": 23}, {"鲜鸭舌": 19}, {"浪漫里脊": 21}, {"五花太阳卷": 23}, {"肥牛踏青": 39}, {"雪花腹肉": 79}, {"雪花眼肉": 59}, {"雪花上脑": 39}, {"牛羊双拼": 49}, {"相间肥牛": 29}, {"羔羊肉卷": 29}, {"洋洋得意": 39}, {"鸡腿菇": 13}, {"杏鲍菇": 13}, {"菇菇宴": 29}, {"南川方竹笋": 13}, {"脆皮笋": 11}, {"野生小木耳": 13}];
+    var chuan = [{"野山珍烩肚条": 45}, {"芳香排骨": 45}, {"潼南太安鱼": 81}, {"养生老鸭汤": 45}, {"农家土鳝鱼": 68}, {"创戈鸡杂": 68}, {"小煎麻麻鸡": 45}, {"传统毛血旺": 54}, {"私房耗儿鱼": 68}, {"过水鱼": 81}, {"云阳农家土豆片": 18}, {"老干妈盐煎肉": 28}, {"子姜肉丝": 30}, {"老腊肉": 36}, {"小煎肥肠": 45}, {"花椒腰花": 45}, {"尖椒嫩肉片": 45}, {"豆腐鱼": 54}, {"榨菜肉丝汤": 18}, {"炒粉": 14}, {"如意肥肠小锅": 68}, {"香辣排骨小锅": 68}, {"飘香水煮鱼": 56}, {"极品耗儿鱼小锅": 86}, {"香辣虾": 88}, {"干锅鳝段小锅": 78}, {"如意肥肠": 88}, {"香辣排骨": 88}, {"极品耗儿鱼中锅": 88}, {"干锅鳝段": 78}, {"雷打黄瓜": 18}, {"凉拌心舌": 36}, {"辣仔鸡": 48}, {"尖椒肥肠": 35}, {"酸菜水滑肉": 56}, {"平锅鲫鱼": 28}, {"蒜台炒肉": 25}, {"尖椒肉皮": 25}, {"泡椒鸡丁": 25}, {"腊肉豇豆": 25}, {"土豆丝": 16}, {"红烧魔芋": 16}, {"韭菜炒豆芽": 16}, {"辣仔兔": 48}, {"干豇豆烧肉": 40}, {"香辣鸡": 48}, {"凉拌猪耳": 35}, {"油渣连白": 19}, {"小炒豆干": 16}, {"酸菜血旺": 16}, {"炒藕片": 16}, {"炖碗豆汤": 16}, {"炖海带汤": 16}, {"小菜豆付汤": 16}, {"三鲜肉片汤": 19}, {"鲫鱼豆腐汤": 28}, {"一次性筷投": 2}, {"白菜豆腐汤": 18}, {"鲜锅紫苏娃": 98}, {"干锅香辣鱿鱼风": 98}];
+    var all = {"hotpot": hotpot, "chuan": chuan};
+
+    generateTicket();
+
+    function generateTicket() {
+        if (!parseInt($("input[name=finalFee]").val())) {
+            alert("总金额必须填写");
+            return;
+        }
+        if (!$("input[name=shopName]").val()) {
+            alert("店名必须填写");
+            return;
+        }
+
+        var config = getEntity("form[name='config-form']");
+        for (var key in config) {
+            $("#content").find('span[name=' + key + ']').text(config[key]);
+        }
+
+        $(".list tbody").empty();
+        var menu = getMenu();
+        var totalPrice = 0;
+        for (var index in menu) {
+            var item = menu[index];
+            var template = "<tr><td class='item-name'>#name#</td><td>#count#</td><td>#price#</td><td>#totalPrice#</td></tr>"
+            var html = template.replace("#name#", item.name)
+                .replace("#count#", item.count.toFixed(1))
+                .replace("#price#", item.price.toFixed(2))
+                .replace("#totalPrice#", item.totalPrice.toFixed(2));
+            totalPrice = totalPrice + item.price * item.count;
+            $(".list tbody").append(html);
+        }
+
+        var finalFee = parseFloat($("input[name=finalFee]").val());
+        var sale = totalPrice - finalFee;
+        $(".foot span[name=total]").text(totalPrice.toFixed(2));
+        $(".foot span[name=sale]").text(sale.toFixed(2));
+        $(".foot span[name=finalFee]").text(finalFee.toFixed(2));
+    }
+
+    function print() {
+        $('#content').print();
+    }
+
+    function getMenu() {
+        var shopType = $("select[name=shopType]").val();
+        var dataList = shuffle(all[shopType]);
+
+        var res = {};
+
+        var tempCount = 0;
+        var finalFee = parseInt($("input[name=finalFee]").val());
+        /*        for (var i = 0; tempCount < finalFee; i++) {
+         if (i >= Math.min(dataList.length, 25)) {
+         i = 0;
+         }
+         var menu = dataList[i];
+
+         var item = {};
+         var name = Object.keys(menu)[0];
+         var price = parseFloat(menu[name]);
+         tempCount = tempCount + price;
+
+         if (res[name]) {
+         res[name].count = res[name].count + 1;
+         res[name].totalPrice = res[name].price * res[name].count;
+         continue;
+         }
+
+         item.name = name;
+         item.price = price;
+         item.count = 1;
+         item.totalPrice = item.price * item.count;
+         res[item.name] = item;
+         }*/
+        while (tempCount < finalFee) {
+            var random = Math.floor((Math.random() * Math.min(dataList.length, 32)));
+            var menu = dataList[random];
+
+            var item = {};
+            var name = Object.keys(menu)[0];
+            var price = parseFloat(menu[name]);
+            tempCount = tempCount + price;
+
+            if (res[name]) {
+                res[name].count = res[name].count + 1;
+                res[name].totalPrice = res[name].price * res[name].count;
+                continue;
+            }
+
+            item.name = name;
+            item.price = price;
+            item.count = 1;
+            item.totalPrice = item.price * item.count;
+            res[item.name] = item;
+        }
+        return res;
+    }
+
+    function getEntity(form) {
+        var result = {};
+        $(form).find("input").each(function () {
+            var field = $(this).attr("name");
+            var val;
+
+            if ($(this).attr('type') == 'checkbox') {
+                val = $(this).prop('checked');
+            } else if ($(this).attr('type') == 'radio') {
+                val = $(this).prop('checked');
+            } else {
+                val = $(this).val();
+            }
+
+            getField(field.split('.'), val, result);
+        });
+        return result;
+    }
+    function getField(fieldNames, value, result) {
+        if (fieldNames.length > 1) {
+            for (var i = 0; i < fieldNames.length - 1; i++) {
+                if (result[fieldNames[i]] == undefined) {
+                    result[fieldNames[i]] = {}
+                }
+                result = result[fieldNames[i]];
+            }
+            result[fieldNames[fieldNames.length - 1]] = value;
+        } else {
+            result[fieldNames[0]] = value;
+        }
+    }
+
+    function shuffle(v) {
+        for (var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
+        return v;
+    };
+
+</script>
+</body></html>
