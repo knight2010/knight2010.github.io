@@ -1,0 +1,16 @@
+[
+{"linka":"http://101.34.186.212:8080/",
+"aname":"复旦附一",
+"linkb":"http://121.204.151.162:7001/",
+"bname":"厦附",
+"cname":"附一",
+"linkc":"http://2057.gei.uat.3qtrials.com:8000/",
+"cmdname":"远程","cmdstr":"mstsc /c 192.168.132.11"},
+{"linka":"http://lnzl-gei.3qt.net/index.htm",
+"aname":"内侧服务",
+"linkb":"http://121.204.151.162:7001/",
+"bname":"成都",
+"cname":"附一",
+"linkc":"http://119.37.199.82:7777/",
+"cmdname":"vpn","cmdstr":"mstsc /c 132.168.131.12"}
+]
