@@ -49,11 +49,19 @@
 
 {"linka":"http://gcp.sichuancancer.org:7100/",
 "aname":"四川肿瘤",
-"linkb":"http://192.168.131.164:9005/",
+"linkb":"http://192.168.131.164:9000/",
 "bname":"成都",
 "cname":"luom/69hPJFLE#ecrf",
 "linkc":"",
-"cmdname":"DB","cmdstr":"mstsc /c 192.168.131.164:9005"},
+"cmdname":"DB","cmdstr":"mstsc /c 192.168.131.164:9000"},
+
+{"linka":"http://2053.gei.uat.3qtrials.com:8000/",
+"aname":"四川华西",
+"linkb":"http://2053.gei.uat.3qtrials.com:8000/",
+"bname":"成都",
+"cname":"admin3/1",
+"linkc":"",
+"cmdname":"VPN","cmdstr":"mstsc /c 192.168.131.164:9005"},
 
 {"linka":"http://116.52.157.87:8000/",
 "aname":"昆医二院",
@@ -73,11 +81,19 @@
 
 {"linka":"http://182.150.35.231:18000/",
 "aname":"川人民",
-"linkb":"http://192.68.206.33",
+"linkb":"http://192.168.131.164:9012/",
 "bname":"成都",
 "cname":"ecrf/Ecrf@gcp2022",
 "linkc":"",
 "cmdname":"远程","cmdstr":"mstsc /c 192.68.206.33"},
+
+{"linka":"http://fdzldocking.demo.3qtrials.com:8000/",
+"aname":"docking",
+"linkb":"http://fdzlctms.demo.3qtrials.com:8000/",
+"bname":"ctms",
+"cname":"ykf/ecrfplus",
+"linkc":"",
+"cmdname":"远程","cmdstr":"mstsc /c 192.168.131.223"},
 
 {"linka":"https://gcpgl.sysucc.org.cn/",
 "aname":"中山肿瘤",
