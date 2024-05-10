@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fff" />
+    <meta name='application-name' content='Borderize' />
+    <link rel="shortcut icon" href=/static/borderize/icons/favicon.ico/>
+    <link rel='apple-touch-icon' sizes='180x180' href=/static/borderize/icons/apple-touch-icon.png />
+    <link rel='icon' type='image/png' sizes='32x32' href=./static/borderize/icons/favicon-32x32.png />
+    <link rel='icon' type='image/png' sizes='16x16' href=./static/borderize/icons/favicon-16x16.png />
+    <title>Borderize Border Generator PNG</title>
+    <link rel="stylesheet" href="/static/borderize/css/style.min.css" />
+    <link rel="stylesheet" href="./bootstrapcdn/bootstrap/4.4.1/css/bootstrap.min.css" />
+    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="container d-flex">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a href="/" class="navbar-brand d-flex align-items-center">
+          <img class="logo" src=/static/borderize/logo/borderize.webp />
+        </a>
+                    <ul class="navbar-nav ml-auto mr-auto">
+                        <li class="nav-item mr-4">
+                            <a class="btn btn-primary" href="/category">Category</a>
+                        </li>
+                        <li class="nav-item mr-1">
+                            <a class="btn btn-outline-primary" href="/#about">About</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mr-1 my-lg-0" action=/search/ method="get">
+                        <input class="form-control mr-sm-2" type="search" name="q" placeholder="Explore +50000 PNG files" aria-label="Search">
+                        <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+
+        <section class="jumbotron text-center langingpage-bg">
+            <div class="container" style="margin: 0 auto; max-width: 32rem !important;">
+                <div class="row">
+                    <h1>Add a Border to PNG Image <br> Add Outline to Text
+                    </h1>
+                    <p style="margin: 0 auto;">
+                        The easiest border generator to add stroke around images and text
+                    </p>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container" style="padding:50px;">
+                <div class="row">
+                    <div class="options-container">
+                        <div class="form-group">
+                            <input type="radio" name="app-mode" id="image-mode" value="image" onchange="onInputChange('appMode', this.value)" checked />
+                            <label for="image-mode">Image</label>
+                            <input type="radio" name="app-mode" id="text-mode" value="text" onchange="onInputChange('appMode', this.value)" />
+                            <label for="text-mode">Text</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="text-mode-controls" hidden>
+                            <form name="textmodeform">
+                                <div class="form-group row">
+                                    <label for="font-input" class="col-sm-4 col-form-label">Write your text</label>
+                                    <textarea rows="3" type="text" onchange="changeText(this.value)" onkeyup="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();" id="font-input" name="text" class="col-sm-8"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="font" class="col-sm-4 col-form-label">Font</label>
+                                    <select class="col-sm-8 custom-select" name="font" id="font" onchange="onInputChange('font', this.value)">
+              </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="text-align" class="col-sm-4 col-form-label">Text Aligment</label>
+                                    <select class="col-sm-8 custom-select" type="number" name="text-align" id="text-align" onchange="onInputChange('text-align', this.value)">
+                <option value="center">Center</option>
+                <option value="left">Left</option>
+                <option value="right">Right</option>
+              </select>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="lineSeparation" class="col-sm-4 col-form-label">Line Separation</label>
+                                    <input class="col-sm-8 form-control" type="number" name="lineSeparation" id="lineSeparation" min="0.0" value="0.5" step="0.1" onchange="onInputChange('lineSeparation', this.value)" />
+                                </div>
+                                <div class="form-group row">
+                                    <label for="fontSize" class="col-sm-4 col-form-label">Font Size</label>
+                                    <input class="col-sm-8 form-control" type="number" name="fontSize" id="fontSize" min="0" value="120" onchange="onInputChange('fontSize', this.value)" />
+                                </div>
+                                <div class="form-group row">
+                                    <label for="fontColor" class="col-sm-4 col-form-label">Font Color</label>
+                                    <input class="col-sm-8 form-control" type="color" name="fontColor" id="fontColor" value="#000000" onchange="onInputChange('fontColor', this.value)" />
+                                </div>
+                            </form>
+                        </div>
+                        <div id="image-mode-controls">
+                            <form name="imagemodeform">
+                                <div class="from-group row">
+                                    <label for="open" class="col-sm-4 col-form-label">Choose file to upload</label>
+                                    <div style="position:relative;">
+                                        <a class='btn btn-info' href='javascript:;'>
+                  Choose File...
+                  <input class="col-sm-8"
+                    style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;'
+                    type="file" name="open" id="open" onchange="onImageChange(event)" />
+                </a> &nbsp;
+                                        <span class='label label-info' id="upload-file-info"></span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div>
+                            <form>
+                                <div class="form-group row">
+                                    <label for="alphaTreshold" class="col-sm-4 col-form-label">Alpha Treshold</label>
+                                    <input class="col-sm-8 form-control-range custom-range" type="range" name="alphaTreshold" id="alphaTreshold" min="0.01" max="1.0" value="0.3" step="0.02" onchange="onInputChange('alphaTreshold', this.value)" />
+                                </div>
+                                <div class="form-group row">
+                                    <label for="borderSize" class="col-sm-4 col-form-label">Border Size</label>
+                                    <input class="col-sm-8 form-control" type="number" name="borderSize" id="borderSize" min="0" value="4" onchange="onInputChange('borderSize', this.value)" />
+                                </div>
+                                <div class="from-group row">
+                                    <label for="borderColor" class="col-sm-4 col-form-label">Border Color</label>
+                                    <input class="col-sm-8 form-control" type="color" name="borderColor" id="borderColor" value="#ffffff" onchange="onInputChange('borderColor', this.value)" />
+                                </div>
+                                <div class="form-group row">
+                                    <label for="shadowSize" class="col-sm-4 col-form-label">Shadow Size</label>
+                                    <input class="col-sm-8 form-control" type="number" name="shadowSize" id="shadowSize" min="0" value="2" onchange="onInputChange('shadowSize', this.value)" />
+                                </div>
+                                <div class="from-group row">
+                                    <label for="shadowColor" class="col-sm-4 col-form-label">Shadow Color</label>
+                                    <input class="col-sm-8 form-control" type="color" name="shadowColor" id="shadowColor" value="#000000" onchange="onInputChange('shadowColor', this.value)" />
+                                </div>
+                                <div class="from-group row">
+                                    <label for="shadowAlpha" class="col-sm-4 col-form-label">Shadow Transparency</label>
+                                    <input class="col-sm-8 form-control-range custom-range" type="range" name="shadowAlpha" id="shadowAlpha" value="170" min="0" max="255" onchange="onInputChange('shadowAlpha', this.value)" />
+                                </div>
+                                <div class="from-group row">
+                                    <label for="shadowBlurStrength" class="col-sm-4 col-form-label">Shadow Blur Strength</label>
+                                    <input class="col-sm-8 form-control-range  custom-range" type="range" name="shadowBlurStrength" id="shadowBlurStrength" value="0.2" min="0.0" max="1.0" step="0.04" onchange="onInputChange('shadowBlurStrength', this.value)" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <div class="form-group" style="text-align: center;">
+                                <button disabled id="download" class="btn btn-primary btn-lg btn-block" name="download" onclick="mydownload()">
+              Download
+            </button>
+                                <p>Preview</p>
+                            </div>
+                            <div class="canvas-container" id="canvas-container" style="background-color: #ffffff;">
+                                <canvas id="canvas" width="100%"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- container -->
+        </section>
+
+        <!-- list of media -->
+        <div class="album py-5 bg-light" id="images">
+            <div class="container">
+                <div class="row" style="justify-content: center;">
+                    <h2>Latest Images</h2>
+                </div>
+                <div class="row">
+
+                </div>
+                <div class="row" style="justify-content: center;">
+                    <div class="pagination">
+                        <span class="step-links">
+          
+
+          <span class="current">
+            Page 1 of 1.
+          </span>
+
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="about" style="padding-top:50px;">
+            <div class="container">
+                <div class="row" style="padding:50px; text-align: justify;">
+                    <h2>About Borderize</h2>
+                    <p>Instantly convert your favourite transparent PNG images with the world’s simplest PNG border generator. Create a border with a small shadow to get the perfect image to sticker effect for free. You can also type your text in the generator
+                        and watch it effortlessly convert into a transparent PNG image with a border and shadows. Quickly create your own text to sticker look and transform simple words into eye-catching appeal in just seconds. The creative Borderize
+                        outline generator will bring life to your text and images to make them stand out. Once your transparent PNG image or text is enhanced with a border, easily download the upgraded look straight to your device. Now you have the perfect
+                        sticker design for your next project!</p>
+                    <h3>Turn Your Text and Images Into Stickers: With the Borderize.com Sticker Generator</h3>
+                    <p>
+                        Borderize.com is an essential multi-purpose border generator tool for creatives or anyone with a desire to spice up their texts and images with an easy website experience. Whether you are hoping to create a border for an image or text, Borderize.com enables
+                        users to get the ultimate sticker look by simply placing their images or text into the generator. Then, within seconds, out comes striking png images with personalized borders, shadows, and more. All your results are available
+                        for download straight onto your device, for a quick turnaround to utilize wherever and however you need. There’s no match to the easiness of sticker generation of Borderize.com.
+                    </p>
+                    <h3>Want some more details of what Borderize.com can do for you?<br><br>Text to PNG Sticker </h3>
+
+
+                    <p>Want an easy way to turn your text to PNG sticker? Borderize.com allows users to smoothly and efficiently make creative text formats with an amazing sticker effect. All you have to do is type any words into a text box and then the
+                        website will auto-generate the perfect sticker for your needs instantly. </p>
+                    <p>The text box is not only limited to words or basic text, but also emojis can be inserted into the sticker to make your work even more fun. This capability expands the possibilities for your new stickers with creative mixtures between
+                        text and emoji characters. </p>
+                    <p>The service is incredibly personalized to each creator’s needs. When on the website, users can pick their font, text alignment, line height, font size, font color, border size, border color, shadow size, shadow color, and shadow transparency.
+                        All of these options just one simple click away for a fast production of the sticker look you want. With all these choices, the user is provided with a highly personalized sticker utilizing a perfect outline to make the text pop
+                        without limitations. The new sticker is a transparent PNG, transformed from text to image, that can be downloaded onto any device for quick use.</p>
+                    <p>Text never has to be boring again with so many options to upgrade words into enhanced eye-catching images that unleash each users’ inner creativity. Borderize.com simplifies this process of turning text to PNG and text to image with
+                        its converter. This conversion has never been so easy before! </p>
+                    <h3>Image to PNG Sticker</h3><br>
+                    <p>What about using the generator to turn an image to sticker? Borderize.com is not just limited to creating PNG images from texts, but also can be used with images. The process is just as simple for this tool, as it is with text! </p>
+                    <p>All a user has to do is insert a PNG image with a transparent background onto the website and pick any border or outline to correspond. A small shadow can even be added around the uploaded PNG image. Then the user can download their
+                        processed or bordered PNG to their device. Just like with text, this version is saved as a PNG for ease of access at later use. </p>
+                    <p>An image can be personalized after being uploaded, by selecting a background color, border size, border color, shadow size, shadow color, shadow transparency, and the transparency threshold. With just a few clicks, you can have a new
+                        and improved picture with the sticker look you have been searching for. Then, in just one second the upgraded picture can be downloaded onto any device. </p>
+                    <p>Don’t believe it’s that easy? See above for how easy it is to make your images pop with the generator.</p>
+                    <p>There are so many options to personalize your picture, whether with just a simple white outline or with more detail. But the common factors are the ease of the experience, the speed of generation, and the sticker appeal that makes
+                        your image pop on the page. </p>
+                    <p>Borderize.com has accelerated the capabilities of transitioning dull images to stickers with its generator. Upgrading your image and making sure it catches attention, has never been easier.
+                    </p>
+                    <h3>Who Is Borderize.com For?</h3>
+                    <p>Now with all these tools and capabilities, it does leave the question of who exactly is Borderize.com designed for. The website is made for anyone. There are no specific skills needed or intensive processes to turn your text to sticker
+                        or image to sticker. All that is needed is a selection from a few options and your text or image can be quickly altered to its new bordered PNG format. So, no matter who you are, Borderize.com is here for you to give your text
+                        or images a little extra spark, as well as give them that sticker feel that is hard to find.
+                    </p>
+                    <p>However, the tool is perfect for “creatives” who jump on every opportunity to go above and beyond to make their work just a tad more unique. Particularly, those in creative careers can utilize the sticker function for campaigns, social
+                        media, websites, logos, or various other design purposes. The sticker generator is sure to give you a distinctive image that sets your work apart from others’ simple and bland designs.</p>
+                    <p>No matter your use, Borderize.com is the easiest way to turn text or images into stickers with borders, outlines, and shadows. </p>
+                    <p>Upgrade your text and images into impressive stickers with the Borderize.com generator. Within in an instant you can add the perfect outline to your PNG images to get a sticker appeal that feels just right. Or just type into a text
+                        box to drastically change any words into a striking PNG image. Borderize.com will bring your text and images to life, so they can stand out wherever and however they are being used. Then, download the new enhanced PNG image in
+                        a matter of seconds, so you can spend less time making a sticker and more time using them. You’ve finally found the perfect site for a sticker design, what are you waiting for? Use Borderize.com today!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer page-footer font-small " style="background: #007bff; color: white">
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 - 2022 Borderize. All rights reserved
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./googleapis/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="./bootstrapcdn/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="./static/borderize/js/shaders-and-fonts.min.js"></script>
+    <script src="./static/borderize/js/shader-and-border-properties.min.js"></script>
+    <script src="./static/borderize/js/canvas-image-text-webgl.min.js"></script>
+    <script src="./static/borderize/js/app.min.js"></script>
+
+    <!--- some scripts that apply to all pages -->
+
+    <script>
+        function saveImage() {
+            let image = document.getElementById("canvas").toDataURL("image/png");
+            const base = window.origin;
+            var url = `${base}/images/base64/`
+            let data = {
+                image: image,
+                title: 'Default title',
+                genesis: 'image',
+            }
+
+            if (document.getElementById('font-input').value !== 'Loaded' &&
+                document.getElementById('font-input').value !== '') {
+                data.media_title = document.getElementById('font-input').value.replace(/\n/g, ' ');
+                data.genesis = 'text';
+            }
+
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: data,
+                beforeSend: function(xhr, settings) {
+                    xhr.setRequestHeader("X-CSRFToken", 'qbP3bTPa6qUjehcJFR9BngrK699GEE0naOooK6ckYJ8pVlSJ0HQpLbWgwgOJOuZ2');
+                },
+                success: function(arg) {
+                    console.log(arg)
+                }
+            })
+        }
+
+        function mydownload() {
+            saveImage()
+            startDownload()
+        }
+    </script>
+</body>
+
+</html>
