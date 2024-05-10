@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Math Notepad</title>
+    <link href="css/mathnotepad.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="scroll-root">
+        <div id="header">
+            <div id="title" class="centered">
+                <a href="//mathnotepad.com1">
+        <img class="logo" alt="Logo" src="img/logo/logo48.png">
+        <img class="name" alt="Math Notepad" src="img/title/title.png"><br>
+        <span class="version">Version 0.11.7</span>
+      </a>
+                <div id="user"></div>
+            </div>
+            <div id="menu-inline">
+                <div id="menu">
+                    <div id="menu-inner">
+                        <div class="centered">
+                            <ul>
+                                <li id="menu-file">
+                                    <a title="Manage files">
+                  File <i class="fa fa-caret-down"></i>
+                </a>
+                                    <ul>
+                                        <li>
+                                            <a id="menu-new" href="#" title="Create a new, empty document">
+                      <i class="fa fa-file-o"></i> New
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-open" href="#" title="Load a document">
+                      <i class="fa fa-folder-open-o"></i> Open
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-save" href="#" title="Save current document">
+                      <i class="fa fa-save"></i> Save
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-rename" href="#" title="Rename current document">
+                      <i class="fa fa-edit"></i> Rename
+                    </a>
+                                        </li>
+
+                  <!-- <li>
+                    <a id="menu-undo" href="#" title="Undo last action (Ctrl+Z)">
+                      <i class="fa fa-undo"></i> Undo
+                    </a>
+                  </li>
+                  <li>
+                    <a id="menu-redo" href="#" title="Redo last action (Ctrl+Shift+Z or Ctrl+Y)">
+                      <i class="fa fa-repeat"></i> Redo
+                    </a>
+                  </li> -->
+                 
+
+                                        <li>
+                                            <a id="menu-share" href="#" title="Share the current sheet">
+                      <i class="fa fa-share-alt"></i> Share
+                    </a>
+                                        </li>
+
+                                        <li>
+                                            <a id="menu-delete" href="#" title="Delete current document">
+                      <i class="fa fa-remove"></i> Delete
+                    </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <noscript>
+      <p style="color:white; font-weight:bold; background-color:red; margin:5px;">
+        Error: Javascript is not enabled on your browser.
+        Javascript is required to run Math Notepad.
+      </p>
+    </noscript>
+
+            <div id="content">
+                
+            </div>
+
+            <script>
+                // show an error on old browsers
+                if (typeof Object.keys === 'undefined') { // simple test for ES5 support
+                    document.getElementById('app').innerHTML = '<p class="error">Error: Unsupported browser. Please upgrade your browser.</p>'
+                }
+            </script>
+
+            <!-- load the (large) javascript at the bottom of the page,
+         so the web page quickly shows up with a loading message -->
+            <script src="mathnotepad.min.js" async></script>
+
+        </div>
+    </div>
+</body>
+
+</html>

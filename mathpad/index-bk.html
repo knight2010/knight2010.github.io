@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <title>Math Notepad</title>
+    <!-- meta data -->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="title" content="Math Notepad">
+    <meta name="keywords" content="math, notepad, math notepad, mathematics, expression, calculate, function, variable, matrix, complex numbers, units, plot, advanced, calculator, sheet, expression, graph, algebra">
+    <meta name="description" content="Math Notepad is a web based editor to do mathematical calculations and plot graphs. It supports real and complex numbers, matrices, and units.">
+    <meta name="author" content="W.J. de Jong">
+
+    <!-- for mobile devices like android and iphone -->
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <script>
+        // redirect to the official website at mathnotepad.com
+        ['mathnotepad.org', 'mathnotepad.herokuapp.com'].forEach(function(host) {
+            if (location.host === host) {
+                location.href = location.href.replace(host, 'mathnotepad.com');
+            }
+        });
+    </script>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="css/mathnotepad.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="scroll-root">
+        <div id="header">
+            <div id="title" class="centered">
+                <a href="//mathnotepad.com">
+        <img class="logo" alt="Logo" src="img/logo/logo48.png">
+        <img class="name" alt="Math Notepad" src="img/title/title.png"><br>
+        <span class="version">Version 0.11.7</span>
+      </a>
+                <div id="user"></div>
+            </div>
+            <div id="menu-inline">
+                <div id="menu">
+                    <div id="menu-inner">
+                        <div class="centered">
+                            <ul>
+                                <li id="menu-file">
+                                    <a title="Manage files">
+                  File <i class="fa fa-caret-down"></i>
+                </a>
+                                    <ul>
+                                        <li>
+                                            <a id="menu-new" href="#" title="Create a new, empty document">
+                      <i class="fa fa-file-o"></i> New
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-open" href="#" title="Load a document">
+                      <i class="fa fa-folder-open-o"></i> Open
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-save" href="#" title="Save current document">
+                      <i class="fa fa-save"></i> Save
+                    </a>
+                                        </li>
+                                        <li>
+                                            <a id="menu-rename" href="#" title="Rename current document">
+                      <i class="fa fa-edit"></i> Rename
+                    </a>
+                                        </li>
+
+                                        <!-- TODO: enable history
+                  <li>
+                    <a id="menu-undo" href="#" title="Undo last action (Ctrl+Z)">
+                      <i class="fa fa-undo"></i> Undo
+                    </a>
+                  </li>
+                  <li>
+                    <a id="menu-redo" href="#" title="Redo last action (Ctrl+Shift+Z or Ctrl+Y)">
+                      <i class="fa fa-repeat"></i> Redo
+                    </a>
+                  </li>
+                  -->
+
+                                        <li>
+                                            <a id="menu-share" href="#" title="Share the current sheet">
+                      <i class="fa fa-share-alt"></i> Share
+                    </a>
+                                        </li>
+
+                                        <li>
+                                            <a id="menu-delete" href="#" title="Delete current document">
+                      <i class="fa fa-remove"></i> Delete
+                    </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a id="menu-docs" href="docs/index.html" target="_blank" title="Open the documentation in a new window">
+                Docs
+              </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <noscript>
+      <p style="color:white; font-weight:bold; background-color:red; margin:5px;">
+        Error: Javascript is not enabled on your browser.
+        Javascript is required to run Math Notepad.
+      </p>
+    </noscript>
+
+            <div id="content">
+                <div id="app">
+                    <div class="loading">loading...</div>
+                </div>
+            </div>
+
+            <div id="footer">
+                <a href="https://mathnotepad.com" target="_blank" class="footer">mathnotepad.com</a> &bull; copyright &copy; 2010-2024 Jos de Jong &bull;
+                <a href="https://mathjs.org" target="_blank" class="footer">powered by mathjs.org</a>
+            </div>
+
+            <script>
+                // show an error on old browsers
+                if (typeof Object.keys === 'undefined') { // simple test for ES5 support
+                    document.getElementById('app').innerHTML = '<p class="error">Error: Unsupported browser. Please upgrade your browser.</p>'
+                }
+            </script>
+
+            <!-- load the (large) javascript at the bottom of the page,
+         so the web page quickly shows up with a loading message -->
+            <script src="mathnotepad.min.js" async></script>
+
+            <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+            <!-- End Cookie Consent plugin -->
+
+        </div>
+    </div>
+</body>
+
+</html>
