@@ -1,0 +1,56 @@
+body{
+  font-family: Asap, Arial, Helvetica, sans-serif;
+  color:white;
+  background:black url(//s.cdpn.io/16327/texture_bg.jpg) no-repeat 50% 0px;
+  margin:5% 15% 0 15%;
+  overflow:hidden;
+}
+
+strong {
+  color:orange;
+}
+
+.highlight {
+  color:red;
+  font-family:serif;
+}
+
+.code {
+  font-family:Courier;
+  color:rgb(221,202,126);
+}
+
+
+
+#demo{
+  position:relative;
+}
+#quote{
+  font-size:36px;
+  line-height:50px;
+  color:#dedede;
+}
+
+button{
+  padding:10px;
+  cursor:pointer;
+}
+
+#nav {
+  padding-bottom:20px;
+}
+
+a:visited, a:link, a:active {
+  color:#87CD02;
+  text-decoration:none;
+  display:inline-block;
+}
+
+a:hover {
+  background-color:#87CD02;
+  color:white;
+}
+
+span {
+  display:inline-block;
+}
