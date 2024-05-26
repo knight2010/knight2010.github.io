@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js"></script>
+    <!-- https://cdn.jsdelivr.net/npm/hanzi-writer-data@latest/%E5%AE%89.json -->
+    <title>Document</title>
+</head>
+<body>
+    <div id="character-item-div"></div>
+    <div id="character-target-div"></div>
+    <button id="animate-button">动画</button>
+    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" id="grid-background-target">
+        <line x1="0" y1="0" x2="100" y2="100" stroke="#DDD" />
+        <line x1="100" y1="0" x2="0" y2="100" stroke="#DDD" />
+        <line x1="50" y1="0" x2="50" y2="100" stroke="#DDD" />
+        <line x1="0" y1="50" x2="100" y2="50" stroke="#DDD" />
+      </svg>
+
+      <div id="character-target-div2"></div>
+
+
+      <div id="character-target-1"></div>
+<div id="character-target-2"></div>
+<button id="animate-button">Start</button>
+
+<div id="character-quick-div"></div>
+<button id="animate-quick-button">quick</button>
+</body>
+<script>
+
+function renderFanningStrokes(target, strokes) {
+  var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.style.width = '75px';
+  svg.style.height = '75px';
+  svg.style.border = '1px solid #EEE'
+  svg.style.marginRight = '3px'
+  target.appendChild(svg);
+  var group = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+
+  // set the transform property on the g element so the character renders at 75x75
+  var transformData = HanziWriter.getScalingTransform(75, 75);
+  group.setAttributeNS(null, 'transform', transformData.transform);
+  svg.appendChild(group);
+
+  strokes.forEach(function(strokePath) {
+    var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    path.setAttributeNS(null, 'd', strokePath);
+    // style the character paths
+    path.style.fill = '#555';
+    group.appendChild(path);
+  });
+}
+
+HanziWriter.loadCharacterData('是').then(function(charData) {
+  var target = document.getElementById('character-item-div');
+  for (var i = 0; i < charData.strokes.length; i++) {
+    var strokesPortion = charData.strokes.slice(0, i + 1);
+    renderFanningStrokes(target, strokesPortion);
+  }
+});
+
+var writer1 = HanziWriter.create('character-quick-div', '激', {
+  width: 100,
+  height: 100,
+  padding: 5,
+  showOutline: false,
+  strokeAnimationSpeed: 5, // 5x normal speed
+  delayBetweenStrokes: 300, // milliseconds
+  radicalColor: '#337ab7' // blue
+});
+
+document.getElementById('animate-quick-button').addEventListener('click', function() {
+  writer1.animateCharacter();
+});
+
+var char1 = HanziWriter.create('character-target-1', '很', {
+  width: 100,
+  height: 100,
+  padding: 5,
+  showCharacter: false
+});
+var char2 = HanziWriter.create('character-target-2', '爽', {
+  width: 100,
+  height: 100,
+  padding: 5,
+  showCharacter: false
+});
+
+function chainAnimations() {
+  var delayBetweenAnimations = 1000; // milliseconds
+  char1.hideCharacter();
+  char2.hideCharacter();
+
+  char1.animateCharacter({
+    onComplete: function() {
+      setTimeout(function() {
+        char2.animateCharacter();
+      }, delayBetweenAnimations);
+    }
+  });
+}
+
+document.getElementById('animate-button').addEventListener('click', chainAnimations);
+
+    var writer = HanziWriter.create('character-target-div', '捺', {
+  width: 150,
+  height: 150,
+  padding: 5,
+  radicalColor: '#168F16' // green
+});
+
+document.getElementById('animate-button').addEventListener('click', function() {
+  writer.animateCharacter();
+});
+
+var writer = HanziWriter.create('character-target-div2', '码', {
+  width: 250,
+  height: 250,
+  showCharacter: false,
+  padding: 5
+});
+writer.quiz({
+  onMistake: function(strokeData) {
+    console.log('Oh no! you made a mistake on stroke ' + strokeData.strokeNum);
+    console.log("You've made " + strokeData.mistakesOnStroke + " mistakes on this stroke so far");
+    console.log("You've made " + strokeData.totalMistakes + " total mistakes on this quiz");
+    console.log("There are " + strokeData.strokesRemaining + " strokes remaining in this character");
+  },
+  onCorrectStroke: function(strokeData) {
+    console.log('Yes!!! You got stroke ' + strokeData.strokeNum + ' correct!');
+    console.log('You made ' + strokeData.mistakesOnStroke + ' mistakes on this stroke');
+    console.log("You've made " + strokeData.totalMistakes + ' total mistakes on this quiz');
+    console.log('There are ' + strokeData.strokesRemaining + ' strokes remaining in this character');
+  },
+  onComplete: function(summaryData) {
+    console.log('You did it! You finished drawing ' + summaryData.character);
+    console.log('You made ' + summaryData.totalMistakes + ' total mistakes on this quiz');
+  }
+});
+</script>
+</html>
