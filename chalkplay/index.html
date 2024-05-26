@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>纯CSS3炫酷彩色粉笔字特效|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css" /><!--CSS RESET-->
+	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css"><!--演示页面样式，使用时可以不引用-->
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch:700&display=swap" rel="stylesheet">
+	<style>
+		.demo{ background: #222; }
+		.text-effect{
+		    color: #ffff00;
+		    font-family: 'Cabin Sketch', cursive;
+		    font-size: 100px;
+		    text-align: center;
+		    text-transform: uppercase;
+		    margin: 0 auto;
+		    position: relative;
+		}
+		.text-effect span{
+		    display: inline-block;
+		    animation: animate 0.5s linear infinite both;
+		}
+		.text-effect span:nth-child(1),
+		.text-effect span:nth-child(4),
+		.text-effect span:nth-child(7),
+		.text-effect span:nth-child(10){
+		   color: #4cd137;
+		}
+		.text-effect span:nth-child(2),
+		.text-effect span:nth-child(5),
+		.text-effect span:nth-child(8){
+		   color: #ff0000;
+		}
+		@keyframes animate{
+		    0%, 50%, 100%{ transform: rotate(0deg) scale(1); }
+		    25%{ transform: rotate(4deg) scale(0.98); }
+		    75%{ transform: rotate(-4deg) scale(1.02); }
+		}
+		@media only screen and (max-width: 990px){
+		    .text-effect{ font-size: 100px; }
+		}
+		@media only screen and (max-width: 767px){
+		    .text-effect{ font-size: 80px; }
+		}
+		@media only screen and (max-width: 479px){
+		    .text-effect{ font-size: 60px; }
+		}
+		@media only screen and (max-width: 359px){
+		    .text-effect{ font-size: 45px; }
+		}
+	</style>
+</head>
+<body>
+	<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>纯CSS3炫酷彩色粉笔字特效 <span>A CSS3 fonts style</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="http://www.htmleaf.com/" title="jQuery之家" target="_blank"><span> jQuery之家</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/css3/ui-design/201912165866.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
+			</div>
+		</header>
+		<div class="demo" style="min-height:500px;">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-12">
+	                    <div class="text-effect">
+	                        <span>B</span><span>e</span><span>s</span><span>t</span>
+	                        <span>J</span><span>Q</span><span>u</span><span>e</span><span>r</span><span>y</span>
+	                    </div>
+	                    <div class="text-effect"><SPAN>111+12</SPAN>
+	                        <span>C</span><span>S</span><span>S</span><span>3</span>
+	                        <span>A</span><span>W</span><span>E</span><span>S</span><span>O</span><span>M</span><span>E</span>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+</body>
+</html>
