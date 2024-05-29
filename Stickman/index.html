@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Ths StickMan Animator</title>
+  <meta name="description" content="StickMan Animator App">
+  <meta name="author" content="Swee Warman">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="panel">
+    <div id="sub-panel">
+      <div id="app-title">
+        <h1>THE STICKMAN ANIMATOR</h1>
+      </div>
+      <canvas id="myCanvas" width="400px" height="400px"></canvas>
+      <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="timeRange">
+        <input type="number" id="endtime" name="endtime" value="5" size="5">
+        <button id="snap"><i class="fa fa-camera" style="color:red"></i></button>
+        <button id="play"><i class="fa fa-play"></i></button>
+        <button id="stop"><i class="fa fa-stop"></i></button>
+      </div>
+    </div>
+    <div id="sub-panel">
+      <div id="snapshots">
+        <p>Selected poses:</p>
+        <div id="image-panel"></div> 
+      </div>
+      <div id="data-controls">
+        <button id="download">Save session</button>
+        <input id="file-input" type="file">
+      </div>
+      <div id="help">
+        <h3>Instructions:</h3>
+        <ul>
+          <li>Click on joint and drag mouse to set joint angles.</li>
+          <li>Use the arrow key to move the figure.</li>
+          <li>Set the maximum time of the animation in the input box.</li>
+          <li>Use the slider to set the time instance of a specific pose.</li>
+          <li>Select the camera icon to record a pose at the selected time.</li>
+          <li>Select the play button to run the animation.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.11/paper-full.min.js"></script>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
