@@ -28,7 +28,7 @@
 
 function isWxOrAli() {
       var ua = window.navigator.userAgent.toLowerCase();
-      console.log(ua + 'navigator');
+      document.getElementById('analzingResultId').innerText = ua
       if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			alert('在微信里');
         return "vxin";
@@ -37,7 +37,10 @@ function isWxOrAli() {
 			alert('在支付宝里');
         return "alipy";
       }
-      document.getElementById('analzingResultId').innerText = ua
+      if (ua.match(/bytedance/i) == "bytedance") {
+			alert('抖音');
+        return "bytedance";
+      }
    }
 
 	</script>
