@@ -25,10 +25,25 @@
         event.preventDefault();
     });
 }
+
+function isWxOrAli() {
+      var ua = window.navigator.userAgent.toLowerCase();
+      console.log(ua + 'navigator');
+      if (ua.match(/MicroMessenger/i) == "micromessenger") {
+			alert('在微信里');
+        return "vxin";
+      }
+      if (ua.match(/AlipayClient/i) == "alipayclient") {
+			alert('在支付宝里');
+        return "alipy";
+      }
+   }
+
 	</script>
 </head>
 <body>
 <div style="text-align:center"> <img src="100.png"  alt="Make something awesome!" /> </div>
+<div><button onclick=isWxOrAli()>Click</button></div>
 <div style="text-align:center">{ai}@AirForce™ is under maintenance.</div>
 </body>
 </html>
