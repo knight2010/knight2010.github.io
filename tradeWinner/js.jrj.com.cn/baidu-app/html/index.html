@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>股票收益计算器 </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta http-equiv="pragma"  content="no-cache"/>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<link href="../css/calculator.css" rel="stylesheet" type="text/css" />
+	<style>
+		.cadl dd{
+			clear: right;
+			margin: 0 0 5px;
+		}
+		.result {
+		    border-top: 1px dotted #BDBDBD;
+		    padding: 0;
+		    width:240px;
+		}
+		.result dt {
+		    margin: 0;
+		    width: 150px;
+		}
+		.result .input {
+		    width: 68px;
+		}
+		.jrjlogo {
+		    border-bottom: 1px dotted #BDBDBD;
+		    color: #999999;
+		    font: bold 15px/28px "微软雅黑";
+		    height: 40px;
+		    margin-bottom: 10px;
+		}
+	</style>
+	<script src="../js/gpsy.js"></script>
+	<script src="../js/secTax.js"></script>
+	<script src="../js/common.js"></script>
+	<script>
+		document.domain = "jrj.com.cn";
+	</script>	
+</head>
+<body>
+<form id="con_count_4" name="con_count_4">
+<div class="wrap">
+	<p class="tit"><strong>股票收益计算器</strong></p>
+<div class="boxarea">
+		<div class="content">
+			<p class="jrjlogo"><a href="http://www.jrj.com.cn" title="金融界">&nbsp;</a>中国财经金融门户</p>
+			<dl class="cadl">
+				<dt>证券类型：</dt>
+				<dd>
+					<select id="stock_stockType" name="stockType" onchange="javascript:changeRate_stock(); "><option value="0">沪A股</option><option value="1">沪B股</option><option value="2">沪基金</option><option value="3">沪债券</option><option value="4">深A股</option><option value="5">深B股</option><option value="6">深基金</option><option value="7">深债券</option></select>
+				</dd>
+				<dt>交易数量：</dt>
+				<dd>
+					<input id="stock_tradeAmount" name="tradeAmount" type="text" class="text" />股
+		    </dd>
+				<dt>佣金：</dt><dd><input name="rakeOffRate" id="stock_rate" type="text" class="text" />%</dd>
+				<dt>买入价格：</dt><dd><input id="stock_buyPrice" name="buyPrice" type="text" class="text" />元</dd>
+				<dt>卖出价格：</dt><dd><input id="stock_sellPrice" name="sellPrice" type="text" class="text" />元</dd>		
+			</dl>
+			<p class="tc"><input type="button" value="计算" class="btn" onclick="javascript:exec_stock();" /><input type="reset" value="重新计算" class="btn" onclick="javascript:document.getElementById('con_count_4').reset();changeRate_stock();" /></p>
+			<div style="float:left">
+			<dl class="cadl result">		
+				<dd>买入情况：</dd>
+		
+				<dt>参考保本价：</dt>
+				<dd>
+					<input disabled="disabled" id="stock_reCapitalPrice" value="计算得出" type="text" class="input" />元
+		    	</dd>
+				<dt>盈亏额：</dt><dd><input disabled="disabled" id="stock_profitSum" value="计算得出" type="text" class="input" />元</dd>
+				<dt>收益率：</dt><dd><input disabled="disabled" id="stock_yield" value="计算得出" type="text" class="input" />%</dd>
+				<dt>买入成本：</dt><dd><input disabled="disabled" id="stock_buyCost" value="计算得出" type="text" value="计算得出" class="input" />元</dd>
+				<dt>交易额：</dt><dd><input disabled="disabled" id="stock_buyTradeSum" type="text" value="计算得出" class="input" />元</dd>
+				<dt>税　费：</dt><dd><input disabled="disabled" id="stock_buyTax" type="text" value="计算得出" class="input" />元</dd>
+			</dl>	
+			</div>
+			<div style="float:left; margin-left:10px">
+			<dl class="cadl result">
+				<dd>卖出情况：</dd>
+				<dt>卖出金额(交易额-税费)：</dt><dd><input disabled="disabled" id="stock_gainSum" value="计算得出" size="20" type="text" class="input">元</dd>		
+				<dt>交易额：</dt><dd><input disabled="disabled" id="stock_sellTradeSum" value="计算得出" size="20" type="text" class="input">元</dd>		
+				<dt>税费：</dt><dd><input disabled="disabled" id="stock_sellTax" value="计算得出" size="20" type="text" class="input">元</dd>		
+			</dl>
+			</div>
+			<div style="clear:left"></div>
+			</div>
+	</div>
+</div>
+</form>
+<script src="http://js.jrj.com.cn/common/foot/jrj_dcs_tag.js"></script>
+<script src="http://app.baidu.com/static/appstore/monitor.st"></script>
+</body>
+</html>

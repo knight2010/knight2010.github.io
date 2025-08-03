@@ -1,0 +1,77 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,table,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+img{border:0;vertical-align:top;}
+li{list-style:none;}
+address,caption,cite,code,dfn,em,var,i{font-style:normal;font-weight:normal;}
+abbr,acronym,fieldset{border:0;font-variant:normal;}
+q:before,q:after{content:'';}
+a{color:#039;text-decoration:none;}
+/*a:visited{color:#800080;}*/
+a:hover{color:#c00;text-decoration:underline}
+a:active,a:focus{outline:none;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{*font-size:100%;}
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+.red{color:red;}
+.gre{color:green;}
+.tl{text-align:left;}
+.tc{text-align:center;}
+.tr{text-align:right;}
+body{font-size:12px;line-height:22px;background:url(//i0.jrjimg.cn/other/baiduapp/bg.jpg) repeat;}
+.date{background:url(//i0.jrjimg.cn/other/baiduapp/bgtool.gif) no-repeat}
+.text,.cadl .input{border:1px solid #cecece;box-shadow:1px 2px 1px #eee inset;height:17px;text-align:right;padding:2px 4px;width:130px;}
+.date{background-position:right 2px;padding:2px 20px 2px 4px}
+.btn,.btn2{background:url(//i0.jrjimg.cn/other/baiduapp/btbg.png) no-repeat;border:0;cursor:pointer;height:26px;line-height:26px;width:60px;font-size:14px;margin:10px 11px 18px;}
+.btn{background-position:0 -40px;color:#fff;}
+.btn2{background-position:0 -70px;color:#a09f9f;}
+.wrap{width:530px;margin:0 auto;padding:5px 0}
+.tit strong{font:bold 20px/40px "微软雅黑","黑体";color:#84410b;}
+.explain{border:1px solid #ddd;background:#f5f5f5;color:#333;text-indent:2em;padding:5px 10px 4px;margin:4px 0 22px}
+.boxarea{border:1px solid #b6a794;border-radius:5px;box-shadow:-2px -2px 3px #bbb;background:#dad0c4;padding:3px;margin-top:5px;color:#666;}
+.boxarea .content{padding:20px 10px;border:1px solid #ccc9c6;border-radius:2px;background:#fff;}
+.jrjlogo{border-bottom:1px dotted #bdbdbd;height:40px;font:bold 15px/28px "微软雅黑";color:#999;margin-bottom:40px;}
+.jrjlogo a{float:left;width:61px;height:30px;background:url(//i0.jrjimg.cn/other/baiduapp/btbg.png) no-repeat 10px 0;padding:0 10px;margin-right:10px;border-right:1px solid #b2b2b2;}
+.jrjlogo a:hover{text-decoration:none;}
+.cadl input{vertical-align:middle;font-family:Arial}
+.cadl dt{float:left;width:210px;text-align:right;clear:left;margin:2px 0 0}
+.cadl dd{margin:0 0 5px;clear:right}
+.cadl dd em{margin:0 15px 0 0}
+.cadl dd em input{margin:-3px 7px 0 0}
+.cadl .text{width:128px;margin:0 3px 0 0}
+.cadl .date{width:114px;}
+.cadl select{border:1px solid #ddd;height:22px;width:140px;box-shadow:1px 2px 1px #eee inset;}
+.boxarea .tc{padding-left:62px;}
+.result{border-top:1px dotted #bdbdbd;padding:21px 0 0}
+.result dt{margin:0;width:225px;_margin:-2px 0 0}
+.infor{margin:70px 0 0 35px;}
+.infor em{margin:0 0 -22px -35px;display:block}
+.result .input{padding:0 0 0 10px;border:0;width:90px;height:15px;margin-bottom:4px;*margin-bottom:0px;background-color:#FFF;color:#558600;font-weight:bold;text-align:left;box-shadow:0 0 0;}
+/*sandy0831*/
+textarea{border:1px solid #CECECE;font-family:Arial}
+.cadl i{color:#999;}
+dd.tc{color:#c00;}
+.rc2{margin:0 0 0 -1px;overflow:hidden;zoom:1;}
+.rc2 .cadl{float:left;width:239px;border-left:1px solid #ccc;}
+.rc2 .cadl dt{width:85px;}
+.result textarea{width:145px;_width:142px;height:60px}
+table.result{width:100%;text-align:right}
+table.result th{text-align:center;line-height:30px;padding:10px 0 0}
+table.result td{padding:0 35px 0 0}
+table.result td.tc{padding:0}
+.lvbd{margin:0 0 0 55px;}
+.lvbd .text{width:80px;}
+.lvbd .date{margin:0 20px 0 0}
+.cadl .sqps{margin:0 0 0 -100px;}
+.cadl .sqps2{margin:0 0 0 -180px;}
+.clear{clear:both;height:0px;overflow:hidden}
+.cadl select.sl{width:70px}
+.result .w2{width:205px}
+
+.imgad{ background: none repeat scroll 0 0 #EEEEEE;
+    float: right;
+    height: 25px;
+    left: -30px;
+    margin-top: -30px;
+    position: relative;
+    width: 120px;}
