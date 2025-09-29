@@ -30,7 +30,7 @@ function isWxOrAli() {
       var ua = window.navigator.userAgent.toLowerCase();
       document.getElementById('analzingResultId').innerText = ua
       if (ua.match(/MicroMessenger/i) == "micromessenger") {
-			alert('在微信里');
+        window.open("#小程序://拼多多优惠商品推荐/UuyGIzuRxMPXiVI","_blank");
         return "vxin";
       }
       if (ua.match(/AlipayClient/i) == "alipayclient") {
