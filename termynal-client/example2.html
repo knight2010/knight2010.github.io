@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>termynal.js example</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                --color-bg: #ddd;
+                --color-text: #1a1e24;
+                --color-text-subtle: #D76D77;
+
+                padding: 0; margin: 0;
+                background: -webkit-linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal data-ty-typeDelay="40" data-ty-lineDelay="600">
+            <span data-ty="input" data-ty-prompt="">2025年10月30日 盘面分析</span>
+            <span data-ty>今日大盘震荡严重,大量散户资金受损,要进行分析?</span>
+            <!-- <span data-ty="input" data-ty-typeDelay="1000" data-ty-prompt="(y/n)">y</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span> -->
+            <span data-ty>大盘整体情况:<br><img style="width: 30%;" src="img.png"></span>
+            <span data-ty="input" data-ty-prompt="">分析 海南热点板块</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty="input" data-ty-prompt=">">分析MACD 量能 并尾盘30分钟数据统计分析</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty>多空力量太强 海南板块由强变弱 高开低收</span>
+            <span data-ty="input" data-ty-prompt="">明天走势如何?</span>
+            <span data-ty="progress" data-ty-progressChar="·"></span>
+            <span data-ty="input" data-ty-prompt=" ~/"> 堪忧 堪忧 堪忧 拿稳手中票 在高位可出</span>
+            <!-- <span data-ty="input" data-ty-prompt=" ~/">拿稳手中票 在高位可出</span> -->
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
