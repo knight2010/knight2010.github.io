@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>termynal.js example</title>
+        <meta charset="utf-8">
+        <!-- include the termynal stylesheet -->
+        <link rel="stylesheet" href="termynal.css">
+        <!-- some custom styles for the page -->
+        <link href="https://fonts.googleapis.com/css?family=Fira+Mono">
+        <style>
+            body {
+                padding: 0; margin: 0;
+                background: #1a1e24;
+                width: 100%;
+                min-height: 100vh;
+                display: -webkit-box; display: -ms-flexbox; display: flex;
+                -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+                -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;
+                -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- the termynal container -->
+        <div id="termynal" data-termynal >
+            <span data-ty="input">下载A股波动3个点的股票</span>
+            <span data-ty="progress"></span>
+            <span data-ty>任务完成,开始分析>>>></span>
+            <span data-ty></span>
+            <span data-ty="input">准备剔除科创版,并筛选创业版的半导体板块</span>
+            <span data-ty="progress"></span>
+            <span data-ty>处理完毕,筛选出'8'只活跃票,进一步分析吗?</span>
+            <span data-ty></span>
+            <span data-ty="input">启动ai分析</span>
+            <span data-ty="input" data-ty-prompt=">>>">分析最近3年的财务报表</span>
+            <span data-ty="input" data-ty-prompt=">>>">寻找拐点并分析K线规律</span>
+            <span data-ty="input" data-ty-prompt=">>>">统计最近3个月的筹码</span>
+            <span data-ty="input" data-ty-prompt=">>>">数据处理中,结果仅供参考,不作为投资推荐</span>
+            <span data-ty="progress"></span>
+            <span data-ty>[('603290', '300327'), ('002402', '301297')]</span>
+        </div>
+
+        <!-- include and initialise termynal.js -->
+        <script src="termynal.js" data-termynal-container="#termynal"></script>
+    </body>
+</html>
